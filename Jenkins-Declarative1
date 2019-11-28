@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage('git checkout'){
+            steps{
+              git credentialsId: 'GitHubLoki', url: 'https://github.com/loki17/myweb'  
+            }
+        }
+    }
+}
